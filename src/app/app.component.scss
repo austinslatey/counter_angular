@@ -1,0 +1,53 @@
+// Define variables for reusable values
+$primary-color: #007bff;
+$disabled-color: #cccccc;
+$border-color: #ddd;
+$background-light: #f8f9fa;
+$text-color: #333;
+$max-width: 400px;
+
+// Global styles for headings
+h1, h2 {
+  text-align: center;
+  color: $text-color;
+}
+
+// Counter display
+p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+// Button styles
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+
+  // Disabled state
+  &:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+// History list styles
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: $max-width;
+  margin: 20px auto;
+
+  li {
+    background-color: $background-light;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+  }
+}
