@@ -12,7 +12,7 @@ export class AppComponent {
 
   count = 0;
 
-  history: string[] = [];  
+  history: string[] = [];
 
   increment() {
     this.count++;
@@ -21,9 +21,11 @@ export class AppComponent {
   }
 
   decrement() {
-    this.count--;
-    // log the action
-    this.history.push(`Decremented to ${this.count}`);
+    if (this.count > 0) {
+      this.count--;
+      // log the action
+      this.history.push(`Decremented to ${this.count}`);
+    }
   }
 
   reset() {
@@ -32,7 +34,7 @@ export class AppComponent {
     this.history.push(`Reset to ${this.count}`);
   }
 
-  clearHistory(){
+  clearHistory() {
     // clear the array
     this.history = [];
   }
